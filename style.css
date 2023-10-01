@@ -1,0 +1,492 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #080808;
+    color: #fff;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(Picsart_23-09-18_15-31-35-456.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.header-text-1 a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #ff0000;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #ff0000;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+}
+.header-text-1 a:hover{
+    background: #ff0000;
+    color: #081b29;
+    box-shadow: 0 0 20px #ff0000;
+}
+.container{
+    padding: 10px 10%;
+}
+.container .logo a{
+    color: #ff0000;
+    font-size: 40px;
+    text-decoration: none;
+    font-weight: 600;
+}
+.container .logo a span{
+    color: #fff;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo a{
+    width:150px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff0000;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+    margin-left: 0%;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color: #ff0000;
+}
+.header-text h4 span{
+    color: #ff0000;
+}
+/*--------------about--------------*/
+#about{
+    padding: 80px 0;
+    color: #ababab;
+    background-color: black;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+    filter: grayscale(80%);
+    flex-basis: 10%;
+}
+.about-col-2{
+    flex-basis: 70%;
+}
+.sub-title{
+    font-size: 50px;
+    font-weight: 600;
+    color: #ff0000;
+}
+.sub-title-1{
+    font-size: 25px;
+    font-weight: 600;
+    color: #fff;
+}
+.sub-title-2{
+    font-size: 15px;
+    font-weight: 600;
+}
+.sub-title-3{
+    font-size: 15px;
+    font-weight: 600;
+}
+.sub-title-4{
+    font-size: 15px;
+    font-weight: 600;
+}
+.about-col-2 a{
+    display: inline-block;
+    background: #ff0000;
+    color: #fff;
+    font-size: 20px;
+    padding: 12px 36px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: 2px solid crimson; 
+    transition: 0.5s; 
+}
+.about-col-2 a:hover{
+    color: #fff;
+    background: none;
+}
+.sub-title-5{
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+    padding-top: 30px;
+}
+.sub-title-5 span{
+    color: #ff0000;
+}
+section{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container2{
+    width: 600px;
+    height: 500px;
+    padding: 75px 90px;
+    margin-left: 120px;
+    margin-top: 5px;
+}
+.heading{
+    text-align: center;
+    font-size: x-large;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
+.bar{
+    font-size: 23px;
+}
+.Technical-bars .bar{
+    margin: 40px 0;
+}
+.Technical-bars .bar:first-child{
+    margin-bottom: 0;
+}
+.Technical-bars .bar:last-child{
+    margin-bottom: 0;
+}
+.Technical-bars .bar .info{
+    margin-bottom: 5px;
+}
+.Technical-bars .bar .info span{
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+.Technical-bars .bar .progress-line{
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: #42494e;
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+@keyframes animate{
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+.Technical-bars .bar .progress-line span{
+    height: 100%;
+    background-color: #ff0000;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+.progress-line.html span{
+    width: 90%;
+}
+.progress-line.css span{
+    width: 80%;
+}
+.progress-line.javascript span{
+    width: 50%;
+}
+.progress-line.python span{
+    width: 90%;
+}
+.progress-line.react span{
+    width: 45%;
+}
+.progress-line span::after{
+    position: absolute;
+    padding: 1px 8px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: -20px;
+    animation: showText 0.5s 1.5s linear forwards;
+}
+.progress-line.html span::after{
+    content: "90%";
+}
+.progress-line.css span::after{
+    content: "80%";
+}
+.progress-line.javascript span::after{
+    content: "50%";
+}
+.progress-line.python span::after{
+    content: "90%";
+}
+.progress-line.react span::after{
+    content: "45%";
+}
+.progress-line span::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    top: -10px;
+    right: 0;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+@keyframes showText{
+    100%{
+        opacity: 1;
+    }
+}
+.container3{
+    width: 600px;
+    height: 500px;
+    padding: 75px 90px;
+    margin-left: 120px;
+}
+.heading1{
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
+.radial-bars{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.radial-bars .radial-bar{
+    width: 50%;
+    height: 170px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    position: relative;
+}
+.radial-bars .radial-bar svg{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50% -50%) rotate(-90deg);
+    width: 120px;
+    height: 160px;
+}
+.radial-bars .radial-bar .progress-bar{
+    stroke-width: 10;
+    stroke: rgb(89, 96, 99);
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+}
+@keyframes animate-bar{
+    100%{
+        stroke-dashoffset: -1;
+    }
+}
+.path{
+    stroke-width: 10;
+    stroke: #ff0000;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+}
+
+.path-1{animation: animate-path1 1s 1s linear forwards;}
+.path-2{animation: animate-path1 1s 1s linear forwards;}
+.path-3{animation: animate-path1 1s 1s linear forwards;}
+.path-4{animation: animate-path1 1s 1s linear forwards;}
+
+@keyframes animate-path1{
+    100%{
+        stroke-dashoffset: 50;
+    }
+}
+@keyframes animate-path12{
+    100%{
+        stroke-dashoffset: 175;
+    }
+}
+@keyframes animate-path1{
+    100%{
+        stroke-dashoffset: 125;
+    }
+}
+@keyframes animate-path1{
+    100%{
+        stroke-dashoffset: 75;
+    }
+}
+.radial-bar .percentage{
+    position: absolute;
+    top: 97%;
+    left: 80%;
+    transform: translate(-50%,-50%);
+    margin-top: -50px;
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    
+}
+.progress-bar .text{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: -5px;
+    transform: translate(-50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+.text{
+    font-size: larger;
+}
+
+
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+.contact-left{
+    margin-top: 230px;
+    margin-right: 50px;
+}
+
+.contact-right{
+    margin-top: 280px;
+}
+.btn{
+    display: inline-block;
+    background: #ff0000;
+    color: #fff;
+    font-size: 20px;
+    padding: 12px 36px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: 2px solid crimson; 
+    transition: 0.5s; 
+}
+.btn:hover{
+    color: #fff;
+    background: none;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form btn{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.sub-title-5{
+    margin-bottom: -50px;
+}
+.sub-title-6{
+    font-size: 50px;
+    margin-top: 50px;
+}
+.sub-title-6 span{
+    color: #ff0000;
+}
+.about-col-1 img{
+    filter: blur(10px);
+}
